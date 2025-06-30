@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Nike Air Clon | Pablo Sosa Dev</title>
-<meta name="description" content="Clon visual de Nike Air desarrollado por Pablo Sosa. Diseño moderno, responsive y funcional con HTML y CSS.">
-<link rel="icon" href="https://www.nike.com/favicon.ico">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Pablo Sosa">
+  <title>Nike Air Clon | Pablo Sosa Dev</title>
+  <meta name="description" content="Clon visual de Nike Air desarrollado por Pablo Sosa. Diseño moderno, responsive y funcional con HTML y CSS.">
+  <link rel="icon" href="https://www.nike.com/favicon.ico">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- NAVBAR -->
   <header>
     <nav class="navbar">
       <div class="logo">NIKE</div>
@@ -21,6 +22,8 @@
       </ul>
     </nav>
   </header>
+
+  <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
       <h1>NIKE AIR</h1>
@@ -32,43 +35,49 @@
     </div>
   </section>
 
+  <!-- PRODUCTOS -->
   <section class="products">
     <h2>Destacados</h2>
     <div class="product-grid">
-      <div class="product-card">
-        <img src="https://i.imgur.com/tGbaZCY.png" alt="Zapatilla 1">
+      <article class="product-card">
+        <img src="https://i.imgur.com/tGbaZCY.png" alt="Zapatilla Air Max Pro">
         <h3>Air Max Pro</h3>
         <p>$29.999</p>
         <a href="#" class="btn">Comprar</a>
-      </div>
-      <div class="product-card">
-        <img src="https://i.imgur.com/3GvwNBf.png" alt="Zapatilla 2">
+      </article>
+      <article class="product-card">
+        <img src="https://i.imgur.com/3GvwNBf.png" alt="Zapatilla Air Zoom">
         <h3>Air Zoom</h3>
         <p>$32.499</p>
         <a href="#" class="btn">Comprar</a>
-      </div>
-      <div class="product-card">
-        <img src="https://i.imgur.com/FLOkO3P.png" alt="Zapatilla 3">
+      </article>
+      <article class="product-card">
+        <img src="https://i.imgur.com/FLOkO3P.png" alt="Zapatilla Revolution 6">
         <h3>Revolution 6</h3>
         <p>$24.999</p>
         <a href="#" class="btn">Comprar</a>
-      </div>
+      </article>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Nike Clon. Todos los derechos reservados.</p>
     <div class="socials">
-  <a href="#"><img src="https://icongr.am/fontawesome/github.svg?size=24&color=ffffff" alt="GitHub"></a>
-  <a href="#"><img src="https://icongr.am/fontawesome/linkedin.svg?size=24&color=ffffff" alt="LinkedIn"></a>
-  <a href="#"><img src="https://icongr.am/fontawesome/instagram.svg?size=24&color=ffffff" alt="Instagram"></a>
-</div>
+      <a href="#"><img src="https://icongr.am/fontawesome/github.svg?size=24&color=ffffff" alt="GitHub"></a>
+      <a href="#"><img src="https://icongr.am/fontawesome/linkedin.svg?size=24&color=ffffff" alt="LinkedIn"></a>
+      <a href="#"><img src="https://icongr.am/fontawesome/instagram.svg?size=24&color=ffffff" alt="Instagram"></a>
+    </div>
   </footer>
+
+  <!-- BOTÓN MODO OSCURO -->
   <button class="mode-toggle" onclick="toggleMode()">🌗 Cambiar modo</button>
-<script>
-  function toggleMode() {
-    document.body.classList.toggle('light-mode');
-  }
-</script>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('light-mode');
+    }
+  </script>
+
 </body>
 </html>

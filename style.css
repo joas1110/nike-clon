@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,9 +7,10 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: #111;
   color: #fff;
+  line-height: 1.6;
 }
 
 a {
@@ -15,17 +18,21 @@ a {
   color: inherit;
 }
 
+/* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
   background-color: #000;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.8rem;
+  font-weight: 600;
   letter-spacing: 2px;
 }
 
@@ -39,57 +46,69 @@ a {
   color: #aaa;
 }
 
+/* HERO */
 .hero {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  padding: 3rem 2rem;
   background-color: #1a1a1a;
 }
 
 .hero-content {
   max-width: 500px;
+  flex: 1 1 400px;
 }
 
 .hero-content h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 .hero-content p {
   font-size: 1.2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
+.hero-img {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.hero-img img {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* BOTONES */
 .btn {
   background-color: #fff;
   color: #000;
   padding: 0.75rem 1.5rem;
   border-radius: 4px;
   font-weight: bold;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
+  display: inline-block;
 }
 
 .btn:hover {
   background-color: #ddd;
+  transform: translateY(-2px);
 }
 
-.hero-img img {
-  width: 350px;
-  max-width: 100%;
-}
-
+/* PRODUCTOS */
 .products {
-  padding: 3rem 2rem;
+  padding: 4rem 2rem;
   text-align: center;
   background-color: #f5f5f5;
   color: #000;
 }
 
 .products h2 {
+  font-size: 2.5rem;
   margin-bottom: 2rem;
-  font-size: 2rem;
 }
 
 .product-grid {
@@ -100,75 +119,49 @@ a {
 
 .product-card {
   background: #fff;
-  border-radius: 8px;
-  padding: 1rem;
-  text-align: center;
-}
-
-.product-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: contain;
-}
-
-footer {
-  padding: 1rem;
-  background-color: #000;
-  color: #888;
-  text-align: center;
-}
-
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.product-card {
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .product-card:hover {
   transform: scale(1.03);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
 }
 
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-content h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
-  }
-
-  .hero-img img {
-    width: 80%;
-    margin-top: 1rem;
-  }
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 1rem;
 }
 
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* FOOTER */
+footer {
+  padding: 2rem 1rem;
+  background-color: #000;
+  color: #888;
+  text-align: center;
 }
 
-.hero-content, .hero-img, .product-card {
-  animation: fadeInUp 0.8s ease both;
+.socials {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
+.socials img {
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s;
+}
+
+.socials img:hover {
+  transform: scale(1.2);
+}
+
+/* MODO OSCURO / CLARO */
 .mode-toggle {
   position: fixed;
   bottom: 20px;
@@ -205,19 +198,35 @@ footer {
   color: #fff;
 }
 
-.socials {
-  margin-top: 1rem;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
+/* ANIMACIONES */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.socials img {
-  filter: brightness(0) invert(1);
-  transition: transform 0.3s;
+.hero-content, .hero-img, .product-card {
+  animation: fadeInUp 0.8s ease both;
 }
 
-.socials img:hover {
-  transform: scale(1.2);
-}
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
 
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-img img {
+    width: 80%;
+    margin-top: 1.5rem;
+  }
+}
