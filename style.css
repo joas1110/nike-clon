@@ -230,3 +230,30 @@ footer {
     margin-top: 1.5rem;
   }
 }
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 2rem;
+  background-color: #1a1a1a;
+  gap: 2rem;
+}
+
+.hero-content {
+  max-width: 500px;
+  flex: 1 1 300px;
+}
+
+.hero-img {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-img img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
